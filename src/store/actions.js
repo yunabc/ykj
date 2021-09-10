@@ -10,9 +10,9 @@ export default {
   set_title ({commit}, show) {
     commit('SET_TITLE', show)
   },
-  set_page ({commit}, page) {
-    commit('SET_PAGE', page)
-  },
+  // set_page ({commit}, page) {
+  //   commit('SET_PAGE', page)
+  // },
   
   
 }

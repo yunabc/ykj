@@ -32,22 +32,22 @@ export const getQuery = (key, string) => {
   return arr && arr[1];
 };
 
-export const throttle = (fn,delay)=>{
-    let valid = true
-    return function() {
-       if(!valid){
-           //休息时间 暂不接客
-           return false 
-       }
-       // 工作时间，执行函数并且在间隔期内把状态位设为无效
-        valid = false
-        setTimeout(() => {
-            fn()
-            valid = true;
-        }, delay)
+export const throttle = (fn, delay) => {
+  let valid = true;
+  return function() {
+    if (!valid) {
+      // 休息时间 暂不接客
+      return false;
     }
-}
-export const isM = ()=>{
-  let innerWidth = window.innerWidth
-  return innerWidth < 1000? true : false
-}
+    // 工作时间，执行函数并且在间隔期内把状态位设为无效
+    valid = false;
+    setTimeout(() => {
+      fn();
+      valid = true;
+    }, delay);
+  };
+};
+export const isM = () => {
+  const innerWidth = window.innerWidth;
+  return innerWidth < 1000;
+};

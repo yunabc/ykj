@@ -1,35 +1,43 @@
 <template>
-  <div id="app" class="ignore" v-cloak>
-    <v-loading ></v-loading>
-      <keep-alive>
-            <router-view v-if="$route.meta.keepAlive" v-wechat-title="titlemsg"></router-view>
-        </keep-alive>
-        <!-- <router-view v-if="!$route.meta.keepAlive" v-wechat-title="titlemsg"></router-view> -->
-        <router-view ></router-view>
-
+  <div
+    id="app"
+    v-cloak
+    class="ignore"
+  >
+    <v-loading />
+    <keep-alive>
+      <router-view
+        v-if="$route.meta.keepAlive"
+        v-wechat-title="titlemsg"
+      />
+    </keep-alive>
+    <!-- <router-view v-if="!$route.meta.keepAlive" v-wechat-title="titlemsg"></router-view> -->
+    <router-view />
   </div>
-
 </template>
 
 <script>
-import vLoading from '@/components/pc/Loading'
-import { mapState } from 'vuex'
-import fixedInput from '@/mixins/fixedInput'
+import vLoading from '@/components/pc/Loading';
+import { mapState } from 'vuex';
+import fixedInput from '@/mixins/fixedInput';
 export default {
   name: 'App',
-  data () {
-    return {
-        titlemsg:'',
-    }
+  components: {
+    vLoading
   },
 
   mixins: [fixedInput],
+  data() {
+    return {
+      titlemsg: ''
+    };
+  },
   updated() {
     // console.log('updated')
     // 解决ios输入框弹出的页面样式问题
-    let inputs = document.querySelectorAll("input")
-    let selects = document.querySelectorAll("select")
-    let textareas = document.querySelectorAll("textarea")
+    const inputs = document.querySelectorAll('input');
+    const selects = document.querySelectorAll('select');
+    const textareas = document.querySelectorAll('textarea');
     inputs.length > 0 && inputs.forEach(item => {
       // console.log(item)
       item.onblur = this.temporaryRepair;
@@ -41,23 +49,20 @@ export default {
       item.onblur = this.temporaryRepair;
     });
   },
-  components:{
-    vLoading
-  },
-  created () {
-    (function(){
-      function resetFontSize () {
-        setTimeout(function(){
+  created() {
+    (function() {
+      function resetFontSize() {
+        setTimeout(function() {
           // 设置网页字体为默认大小
-          WeixinJSBridge.invoke('setFontSizeCallback', {'fontSize': 0});
-        },0);
+          WeixinJSBridge.invoke('setFontSizeCallback', { fontSize: 0 });
+        }, 0);
         // 重写设置网页字体大小的事件
-        WeixinJSBridge.on('menu:setfont', function () {
-          WeixinJSBridge.invoke('setFontSizeCallback', {'fontSize': 0});
+        WeixinJSBridge.on('menu:setfont', function() {
+          WeixinJSBridge.invoke('setFontSizeCallback', { fontSize: 0 });
         });
       }
       if (typeof WeixinJSBridge === 'undefined') {
-        document.addEventListener('WeixinJSBridgeReady', function (e) {
+        document.addEventListener('WeixinJSBridgeReady', function(e) {
           resetFontSize();
         });
       } else {
@@ -65,22 +70,20 @@ export default {
       }
     })();
   },
-  computed:{
-    ...mapState(['title']),
+  computed: {
+    ...mapState(['title'])
   },
   watch: {
-    '$route' (val) {
-      this.$store.dispatch('set_title',this.$route.meta.title)
+    '$route'(val) {
+      this.$store.dispatch('set_title', this.$route.meta.title);
     },
-    'title'(newval,oldval){
-      this.titlemsg=newval;
-
+    'title'(newval, oldval) {
+      this.titlemsg = newval;
     }
   }
 
-}
+};
 </script>
-
 
 <style lang="stylus">
 @import './assets/css/common/index.styl'
