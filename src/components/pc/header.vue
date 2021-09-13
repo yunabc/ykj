@@ -61,11 +61,15 @@
         </div>
       </div>
     </div>
+    <v-dialog />
   </div>
 </template>
 
 <script>
-  import { isM } from 'js/util';
+  import Vue from 'vue'
+import { isM } from 'js/util';
+import VModal from 'vue-js-modal'
+Vue.use(VModal,{ dialog: true })
 export default {
   name: '',
   data() {
@@ -111,12 +115,12 @@ export default {
           path: '/official/about',
           children: []
         },
-        {
-          nav: '商城',
-          path: '/official/market',
-          children: [],
-          href: 'http://www.ebaocloud.com/en'
-        },
+        // {
+        //   nav: '商城',
+        //   path: '/official/market',
+        //   children: [],
+        //   href: 'http://www.ebaocloud.com/en'
+        // },
         {
           nav: '联系我们',
           path: '/official/contact',
@@ -139,9 +143,9 @@ export default {
       // 首页 导航栏浮动
       this.changeHeader();
     },
-    showNavs(val){
-      if(isM()){
-        this.$emit('fixedheader',val)
+    showNavs(val) {
+      if (isM()) {
+        this.$emit('fixedheader', val);
       }
     }
   },
@@ -161,7 +165,7 @@ export default {
     },
     goPath(item) {
       if (item.children && item.children.length > 0) {
-        return  item.slide = !item.slide;
+        return item.slide = !item.slide;
       }
 
       if (this.page == item.path) {
@@ -173,7 +177,20 @@ export default {
     },
     toPage(item) {
       if (item.path.indexOf('/official/market') > -1) {
-        window.location.href = item.href;
+        // window.location.href = item.href;
+        // debugger
+        this.$modal.show('dialog', {
+          title: '建设中 ...，敬请期待',
+          // text: '建设中 ...，敬请期待',
+          buttons: [
+            {
+              title: '确定',
+              handler: () => {
+                this.$modal.hide('dialog')
+              }
+            }
+          ]
+        })
         return;
       }
       this.$router.push({
@@ -234,7 +251,7 @@ export default {
       position fixed
     &.absolute
       position relative
-      width 100% 
+      width 100%
     .logo
       width 115px
       height 36px

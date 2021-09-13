@@ -86,7 +86,7 @@
                 易康吉文化
               </p>
             </div>
-            <div class="li">
+            <!-- <div class="li">
               <div
                 @click.stop="toMarket"
                 class="model"
@@ -105,7 +105,7 @@
               >
                 产品展示
               </p>
-            </div>
+            </div> -->
             <div class="li">
               <div
                 @click.stop="toPath('/official/contact')"
@@ -127,7 +127,7 @@
               </p>
             </div>
           </div>
-          <div class="contact" v-if="false">
+          <div class="contact">
             <div
               @click.stop="qrcodeHandler"
               class="li icon-weixin"
