@@ -3,8 +3,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-const resolve = file=> path.resolve(__dirname,'../../webapp/bxb/activity/',file)
-// const resolve = filestr=> path.resolve(__dirname,'../',filestr)
+// const resolve = file=> path.resolve(__dirname,'../../webapp/bxb/activity/',file)
+const resolve = filestr=> path.resolve(__dirname,'../',filestr)
 module.exports = {
   dev: {
 
@@ -60,10 +60,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: resolve('index.html'),
+    index: resolve('dist/index.html'),
 
     // Paths
-    assetsRoot: resolve(''),
+    assetsRoot: resolve('dist'),
     assetsDllDirectory: 'dll',
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
