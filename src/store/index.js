@@ -9,6 +9,7 @@ Vue.use(Vuex);
 
 const createStore = new Vuex.Store({
   state: {
+    showLoading:false,
     history: 0,
     title: null // 动态路由页面title
     // page:'',

@@ -537,26 +537,26 @@ export default {
           content '产品披露'
 @media(max-width: 999px)
   .lineHeight
-    line-height 28px
+    line-height 56px
   .borderR
     &:after
       content ''
       position absolute
       right 0
       margin-right 0
-      top 8px
-      height 12px
-      width 1px
+      top 16px
+      height 24px
+      width 2px
   .info
     .top
       background url("~@/assets/imgs/mobile/info/top.png") 0 no-repeat
       background-size 100%
-      height 100px
+      height 200px
       .tabs
         display none
     .block
       // min-height 300px
-      padding-bottom 30px
+      padding-bottom 60px
       &.qualification
         .title
           &:after
@@ -564,23 +564,23 @@ export default {
         .photos
           display flex
           .imgbox
-            width 171px
-            padding-bottom 10px
-            margin-right 14px
-            box-shadow 0 0 10px -5px #ccc
+            width 342px
+            padding-bottom 20px
+            margin-right 28px
+            box-shadow 0 0 20px -10px #ccc
             img
               width 100%
             .toPdf
               cursor pointer
               color #A3A3A3
               text-align center
-              line-height 16px
-              font-size 11px
+              line-height 32px
+              font-size 22px
               vertical-align middle
               span
                 display inline-block
-                width 16px
-                height 16px
+                width 32px
+                height 32px
                 border-radius 50%
                 img
                   width 100%
@@ -588,58 +588,58 @@ export default {
 
         .logos
           width auto
-          min-height 200px
-          padding-right 17px
+          min-height 400px
+          padding-right 34px
           &:after
             content ''
             width 340rem
             height 0
             font-size 0
           .logo
-            flex 0 0 102px
-            height 45px
+            flex 0 0 204px
+            height 90px
             img
               width 100%
       &.internet
         .content
           width auto
-          padding-right 17px
+          padding-right 34px
           .title1
-            font-size 14px
-            line-height 20px
-            padding-left 18px
+            font-size 28px
+            line-height 40px
+            padding-left 36px
             position relative
-            margin-bottom 17px
+            margin-bottom 34px
             &:after
               content ''
               position absolute
-              left 4px
+              left 8px
               top 50%
-              margin-top -4px
-              width 4px
-              height 4px
+              margin-top -8px
+              width 8px
+              height 8px
               border 1px solid #f8b044
               border-radius 50%
           .desc
-            line-height 16px
-            font-size 11px
-            margin-bottom 24px
-            padding-left 8px
+            line-height 32px
+            font-size 22px
+            margin-bottom 48px
+            padding-left 16px
             position relative
             &:after
               content '*'
               position absolute
               left 0
-              top 4px
-              line-height 12px
-              font-size 12px
+              top 8px
+              line-height 24px
+              font-size 24px
               color #E54141
 
           .net
-            border-radius 4px 4px 0 0
+            border-radius 8px 8px 0 0
             overflow hidden
             display flex
-            font-size 12px
+            font-size 24px
             &.mTable
               >.left
                 flex 0 0 36%
@@ -654,13 +654,13 @@ export default {
             >.center
               flex 1
             &.block1
-              margin-bottom 20px
+              margin-bottom 40px
               .right
                 border 1px solid #E6E6E7
                 border-left none
 
           .table
-            margin-bottom 20px
+            margin-bottom 40px
             &.table3
               .line
                 >.left
@@ -676,10 +676,10 @@ export default {
               border-top none
               >div
                 text-align center
-                padding 24px 10px
+                padding 48px 20px
                 flex 1
-                line-height 17px
-                font-size 12px
+                line-height 34px
+                font-size 24px
                 &.right
                   text-align left
                   position relative

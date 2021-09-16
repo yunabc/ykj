@@ -57,8 +57,45 @@ var router = new Router({
 
         }
       ]
-    }
+    },
+    {
+      path: '/activity',
+      redirect: '/404',
+      component: resolve => require(['@/components/mobile/common'], resolve),
+      children: [
+        {
+          path: 'midAutumn',
+          redirect: 'midAutumn/midAutumnIndex',
+          component: resolve => require(['@/components/mobile/common'], resolve),
+          children:[
+            {
+              path: 'midAutumnIndex',
+              name: 'midAutumnIndex',
+              component: resolve => require(['@/pages/activity/midAutumn/midAutumnIndex'], resolve)
+            },
+            {
+              path: 'midAutumnQuestion/:index',
+              name: 'midAutumnQuestion',
+              component: resolve => require(['@/pages/activity/midAutumn/midAutumnQuestion'], resolve)
+            },
+            {
+              path: 'midAutumnQuestion',
+              redirect: 'midAutumnQuestion/0'
+            },
+            {
+              path: 'midAutumnIndex',
+              name: 'midAutumnIndex',
+              component: resolve => require(['@/pages/activity/midAutumn/midAutumnResult'], resolve)
+            }
+          ]
+        },
 
+      ]
+    },
+    {
+      path: '/404',
+      component: resolve => require(['@/components/notFound'], resolve),
+    }
   ]
 });
 router.beforeEach((to, from, next) => {

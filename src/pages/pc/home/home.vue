@@ -912,22 +912,22 @@ export default {
 
 @media(max-width: 999px)
   >>>.bullet-normal
-    margin 0 15px 0 15px
+    margin 0 30px 0 30px
     display inline-block
-    width 16px
-    height 4px
+    width 32px
+    height 8px
     background-color #fff
     opacity .4
-    border-radius 2px
+    border-radius 4px
   >>>.active
     opacity 1
   .goBtn
-    width 30px
-    height 30px
+    width 60px
+    height 60px
   .home
     .top
       .swiper-slide
-        height 492px
+        height 984px
         &.slide1
           background url("~@/assets/imgs/mobile/home/m-slide1.png") 0 no-repeat
           background-size 100% 100%
@@ -939,106 +939,106 @@ export default {
           background-size 100% 100%
         .text-box
           left 0
-          top 160px
+          top 320px
           width 100%
           .txt1
-            font-size 16px
-            line-height 24px
-            margin-bottom 20px
+            font-size 32px
+            line-height 48px
+            margin-bottom 40px
             &:after
-              bottom -10px
-              border-bottom 2px solid #855C4E
+              bottom -20px
+              border-bottom 4px solid #855C4E
               opacity  .5
               width 100%
               height 0
               font-size 0
           .txt2
-            font-size 20px
-            line-height 29px
+            font-size 40px
+            line-height 58px
             font-weight 500
       .home-header
         position relative
     .block
-      padding 33px 0 0 17px
+      padding 66px 0 0 34px
       background-color #F5F5F5
       .text-box
         display block
         .left
           width auto
           .title
-            line-height 32px
+            line-height 64px
             padding-top 0
-            font-size 25px
+            font-size 50px
             color #e6e6e7
             position relative
-            margin-bottom 64px
+            margin-bottom 128px
             &:before
               height 0
             &:after
-              margin-bottom -18px
-              font-size 20px
-              bottom 14px
+              margin-bottom -36px
+              font-size 40px
+              bottom 28px
               color #515356
               position absolute
               left 0
               line-height 1
               font-weight bold
           .desc
-            line-height 20px
-            padding-right 10px
-            font-size 12px
+            line-height 40px
+            padding-right 20px
+            font-size 24px
             color #515356
-            margin-bottom 10px
+            margin-bottom 20px
       &.mountain
         background url("~@/assets/imgs/mobile/home/mountain.png") left bottom no-repeat
         background-size 100%
-        height 670px
+        height 1340px
         .text-box
           .right
             position relative
             box-sizing border-box
-            width 306px
-            height 112px
-            margin-left 52px
-            border-radius 10px
-            padding 19px 0 0 20px
-            box-shadow 5px 10px 30px -5px #ccc
+            width 612px
+            height 224px
+            margin-left 104px
+            border-radius 20px
+            padding 38px 0 0 40px
+            box-shadow 10px 20px 60px -10px #ccc
             background url("~@/assets/imgs/pc/home/small-mountain.png") center bottom no-repeat
             background-size 100%
             .content
-              width 180px
+              width 360px
               .year
-                line-height 18px
+                line-height 36px
                 color #ff6622
-                font-size 13px
-                margin-bottom 3px
+                font-size 26px
+                margin-bottom 6px
                 position relative
-                padding-left 58px
+                padding-left 116px
                 &:after
                   content ''
-                  height 1px
+                  height 2px
                   background #ff6622
                   font-size 0
-                  width 45px
+                  width 90px
                   left 0
                   position absolute
-                  bottom 9px
+                  bottom 18px
               .change
-                font-size 12px
-                line-height 17px
+                font-size 24px
+                line-height 34px
                 color #4a4a4a
                 .type
                   font-weight bold
             .btns
               position absolute
-              left 210px
-              bottom 21px
+              left 420px
+              bottom 42px
               display flex
               .btn
-                width 23px
-                height 23px
+                width 46px
+                height 46px
                 border-radius 50%
-                margin-right 15px
+                margin-right 30px
                 cursor pointer
                 &.last
                   background url("~@/assets/imgs/pc/home/last.png") 0 no-repeat
@@ -1056,13 +1056,13 @@ export default {
           .year
             position absolute
             text-align center
-            width 40px
-            line-height 17px
-            font-size 12px
+            width 80px
+            line-height 34px
+            font-size 24px
             color #4A4A4A
-            padding-bottom 73px
+            padding-bottom 146px
             background url("~@/assets/imgs/pc/home/year.png") center bottom no-repeat
-            background-size 21px
+            background-size 42px
             cursor pointer
             &.cur
               &:after
@@ -1071,40 +1071,40 @@ export default {
               transition all 0.3s
               content ''
               position absolute
-              left 15px
+              left 30px
               // margin-left -10px
-              bottom 45px
+              bottom 90px
               border-radius 50%
-              width 6px
-              height 6px
+              width 12px
+              height 12px
               background-color #ff6622
-              border 2px solid #FACDB8
+              border 4px solid #FACDB8
             &.pos2016
               left 0px
-              bottom 50px
+              bottom 100px
             &.pos2017
-              left 67px
-              bottom 53px
+              left 134px
+              bottom 106px
             &.pos2018
-              left 119px
-              bottom 64px
+              left 238px
+              bottom 128px
 
             &.pos2019
-              left 165px
-              bottom 73px
+              left 330px
+              bottom 146px
             &.pos2020
-              left 217px
-              bottom 85px
+              left 434px
+              bottom 170px
             &.pos2021
-              left 289px
-              bottom 102px
+              left 578px
+              bottom 204px
         .pos-mountain
           position absolute
-          right 171px
-          bottom 30px
+          right 342px
+          bottom 60px
       &.map
         padding-right 0
-        padding-bottom 93px
+        padding-bottom 196px
         background url("~@/assets/imgs/mobile/home/map-bg.png") 0 bottom no-repeat
         background-size 100% 100%
         position relative
@@ -1113,32 +1113,32 @@ export default {
           position absolute
           z-index 20
           display block
-          bottom 300px
-          left 20px
-          width 300px
-          padding 21px 25px
+          bottom 600px
+          left 40px
+          width 600px
+          padding 42px 50px
           color #515356
           background-color rgba(255,255,255,.9)
-          font-size 12px
-          line-height 17px
-          box-shadow 5px 5px 0 5px rgba(255,255,255,.7)
+          font-size 24px
+          line-height 34px
+          box-shadow 10px 10px 0 10px rgba(255,255,255,.7)
           .h4
-            line-height 17px
+            line-height 34px
           .content
-            line-height 17px
+            line-height 34px
           .line
             font-size 0
-            height 2px
+            height 4px
             background-color #FF6622
-            width 38px
-            margin-bottom 7px
+            width 76px
+            margin-bottom 14px
         .bg
           position absolute
-          width 30px
-          height 30px
+          width 60px
+          height 60px
           left 50%
           top 68%
-          margin -15px 0 0 -15px
+          margin -30px 0 0 -30px
           &.animate__linearbig
             transform scale(14)
         .content
@@ -1146,33 +1146,33 @@ export default {
           z-index 2
         .pos-map
           position absolute
-          right 171px
-          bottom -80px
+          right 342px
+          bottom -160px
         .text-box
           position relative
           z-index 2
-          margin-bottom 132px
+          margin-bottom 264px
           .left
             .title
               &:after
                 content "分支机构分布图"
           .right
             .search-box
-              margin-left 20px
-              width 302px
-              height 28px
+              margin-left 40px
+              width 604px
+              height 56px
               display flex
               align-items flex-start
-              box-shadow 0px 0px 10px 0px #ccc
+              box-shadow 0px 0px 20px 0px #ccc
               .s-left
-                flex 0 0 228px
+                flex 0 0 456px
                 .select
                   cursor pointer
                   background-color #fff
-                  height 28px
-                  padding-left 20px
-                  line-height 28px
-                  font-size 12px
+                  height 56px
+                  padding-left 40px
+                  line-height 56px
+                  font-size 24px
                   color #5d5d5d
                   position relative
                   &:after
@@ -1180,18 +1180,18 @@ export default {
                     position absolute
                     width 0
                     height 0
-                    border-left 6px solid transparent
-                    border-right 6px solid transparent
-                    border-top 6px solid #A3A3A3
-                    right 12px
+                    border-left 12px solid transparent
+                    border-right 12px solid transparent
+                    border-top 12px solid #A3A3A3
+                    right 24px
                     top 50%
-                    margin-top -3px
+                    margin-top -6px
                 .options
-                  box-shadow 0px 0px 10px 0px #ccc
-                  height 142px
+                  box-shadow 0px 0px 20px 0px #ccc
+                  height 284px
                   background-color #fff
-                  margin-top 2px
-                  padding 19px 20px
+                  margin-top 4px
+                  padding 38px 40px
                   overflow auto
                   display flex
                   flex-wrap wrap
@@ -1204,33 +1204,33 @@ export default {
                   .option
                     cursor pointer
                     background-color #F5F5F5
-                    width 88px
-                    height 20px
-                    line-height 20px
+                    width 176px
+                    height 40px
+                    line-height 40px
                     text-align center
-                    font-size 12px
+                    font-size 24px
                     color #5D5D5D
                     &.cur
                       background-color #FEEAD7
                       color #FF6622
               .s-right
                 cursor pointer
-                background-size 18px,100%
+                background-size 36px,100%
                 flex 1
                 height 100%
 
         .map-container
-          width 340px
-          height 280px
+          width 680px
+          height 560px
       &.partners
         padding-right 0
-        padding-bottom 80px
+        padding-bottom 160px
         background url("~@/assets/imgs/pc/home/partners_bg.png") 0 bottom no-repeat
         background-size 100% 100%
         .pos-partner
           position absolute
-          left 171px
-          bottom 30px
+          left 342px
+          bottom 60px
         .text-box
           position relative
           z-index 2
@@ -1241,16 +1241,16 @@ export default {
         .partner-list
           display flex
           justify-content center
-          margin-bottom 31px
+          margin-bottom 62px
           .li
-            width 73px
-            height 81px
-            margin-right 2px
+            width 146px
+            height 162px
+            margin-right 4px
             img
               height 100%
         .bgTitle
-          line-height 56px
-          font-size 40px
+          line-height 112px
+          font-size 80px
           color #E8E8E8
           font-weight bold
           text-align center

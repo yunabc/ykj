@@ -265,7 +265,7 @@ export default {
 @media(max-width: 999px)
   .about
     .top
-      height 100px
+      height 200px
       background url("~@/assets/imgs/mobile/about/top.png") 0 no-repeat
       background-size 100%
     .block
@@ -276,38 +276,38 @@ export default {
           width auto
           margin-right 0
           width 100%
-          height 349px
+          height 698px
           background url("~@/assets/imgs/mobile/about/company.png") 0 no-repeat
           background-size 100%
         .right
           float none
           width auto
-          padding-left 15px
+          padding-left 30px
           .desc
-            padding-right 15px
+            padding-right 30px
             width auto
-            font-size 12px
-            line-height 17px
-            margin-bottom 18px
+            font-size 24px
+            line-height 34px
+            margin-bottom 36px
       &.business
         background #fff
         padding-left 0
         padding-bottom 0
         .title
-          margin-left 15px
+          margin-left 30px
         .list
           display flex
           justify-content space-between
 
           .li
-            width 124px
+            width 248px
             margin-right 0
             &:last-child
                 .text
                   &:after
                     width 0
             .imgbox
-              height 110px
+              height 220px
               position relative
               &:after
                 content ''
@@ -322,28 +322,28 @@ export default {
                 &:after
                   background-image url("~@/assets/imgs/pc/about/icon-b1.png")
                   background-position center
-                  background-size 44px
+                  background-size 88px
                   background-repeat no-repeat
               &.icon2
                 &:after
                   background-image url("~@/assets/imgs/pc/about/icon-b2.png")
                   background-position center
-                  background-size 44px
+                  background-size 88px
                   background-repeat no-repeat
               &.icon3
                 &:after
                   background-image url("~@/assets/imgs/pc/about/icon-b3.png")
                   background-position center
-                  background-size 44px
+                  background-size 88px
                   background-repeat no-repeat
               img
                 width 100%
                 height 100%
             .text
-              height 37px
-              line-height 37px
+              height 74px
+              line-height 74px
               text-align center
-              font-size 12px
+              font-size 24px
               color #515151
               position relative
               background-color #fff
@@ -351,45 +351,45 @@ export default {
               &:after
                 content ''
                 position absolute
-                right -1px
-                width 1px
-                height 22px
-                top 7.5px
+                right -2px
+                width 2px
+                height 44px
+                top 15px
                 background-color #e6e6e7
       &.culture
         background url("~@/assets/imgs/mobile/about/culture.png") 0 no-repeat
         background-size 100% 100%
-        padding 30px 15px 0
+        padding 60px 30px 0
         padding-bottom 0px
         .title
           &:after
             content '企业文化'
         .list
           .li
-            padding-left 160px
+            padding-left 320px
             .txt1
-              line-height 17px
-              font-size 12px
-              margin-bottom 4px
+              line-height 34px
+              font-size 24px
+              margin-bottom 8px
               &:before
-                width 133px
-                height 1px
-                left -160px
-                top 8px
+                width 266px
+                height 2px
+                left -320px
+                top 16px
               &:after
                 content ''
                 width 0
                 height 0
                 font-size 0
                 position absolute
-                left -16px
-                top 5px
-                border-top 4px solid transparent
-                border-left 8px solid #FF6622
-                border-bottom 4px solid transparent
+                left -32px
+                top 10px
+                border-top 8px solid transparent
+                border-left 16px solid #FF6622
+                border-bottom 8px solid transparent
             .txt2
-              margin-bottom 29px
-              font-size   12px
+              margin-bottom 58px
+              font-size   24px
               color #5d5d5d
-              line-height 17px
+              line-height 34px
 </style>

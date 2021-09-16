@@ -237,12 +237,12 @@ export default {
         font-weight bold
 @media(max-width: 999px)
   .header
-    padding 0 15px
+    padding 0 30px
     margin 0
     width 100%
-    height 54px
+    height 108px
     align-items center
-    flex 0 0 54px
+    flex 0 0 108px
     background-color #fff
     &.navZIndex
       z-index 100
@@ -253,37 +253,37 @@ export default {
       position relative
       width 100%
     .logo
-      width 115px
-      height 36px
+      width 230px
+      height 72px
       background-size 100%
     .pages
       display none
     .m-nav
       display block
-      width 40px
-      height 40px
+      width 80px
+      height 80px
       background url("~@/assets/imgs/mobile/components/m-nav.png") center no-repeat
-      background-size 14px
+      background-size 28px
       &.close
         background url("~@/assets/imgs/mobile/components/close.png") center no-repeat
-        background-size 14px
+        background-size 28px
 
     .m-navs
       background-color #fff
       position absolute
       left 0
-      top 54px
+      top 108px
       display block
       overflow auto
       width 100%
-      height calc(100vh - 54px)
+      height calc(100vh - 108px)
       .section
         border-bottom 1px solid #E6E6E7
         .line
-          padding-left 35px
-          line-height 50px
+          padding-left 70px
+          line-height 100px
           position relative
-          font-size 15px
+          font-size 30px
           color #515151
           &.cur,&:active
             background-color #FFF9EE
@@ -294,31 +294,31 @@ export default {
           &:before
             content ""
             position absolute
-            width 6px
-            height 6px
+            width 12px
+            height 12px
             border-radius 50%
             background-color #E6E6E7
-            left 15px
-            top 20px
-            margin-top 3px
+            left 30px
+            top 40px
+            margin-top 6px
           .arrowRight
             float right
-            margin 20px 20px 0 0
-            width 6px
-            height 10px
+            margin 40px 40px 0 0
+            width 12px
+            height 20px
             transition all .2s
             background url("~@/assets/imgs/mobile/components/arrow.png") center no-repeat
-            background-size 6px
+            background-size 12px
         .opts
           transition max-height .3s
           overflow hidden
           max-height 0
           &.slide
-            max-height 1000px
+            max-height 2000px
           .opt
-            padding-left 35px
-            font-size 13px
-            line-height 40px
+            padding-left 70px
+            font-size 26px
+            line-height 80px
             background-color #fff
             transition all .2s
             &:active

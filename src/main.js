@@ -4,7 +4,7 @@ import router from './router';
 
 import { addFastclick } from 'js/util';
 import directives from '@/directives';
-import animate from 'animate.css';
+import animate from 'animate.css/animate.min.css';
 
 Vue.use(directives);
 

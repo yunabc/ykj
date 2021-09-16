@@ -48,7 +48,7 @@ export default {
 @media(max-width: 999px)
   .service
     .top
-      height 100px
+      height 200px
       background url("~@/assets/imgs/mobile/service/top.png") 0 no-repeat
       background-size 100% 100%
     .content
@@ -59,7 +59,7 @@ export default {
           .title
             width 100%
       .notify
-        height 1414px
+        height 2828px
         background url("~@/assets/imgs/mobile/service/notify.png") 0 no-repeat
         background-size 100% 100%
 </style>

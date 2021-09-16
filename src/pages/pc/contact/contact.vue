@@ -217,69 +217,69 @@ export default {
 @media(max-width: 999px)
   .contact
     .top
-      height 100px
+      height 200px
       background url("~@/assets/imgs/mobile/contact/top.png") 0 no-repeat
       background-size 100%
     .block
-      padding 30px 15px 0
+      padding 60px 30px 0
       &.branches
-        padding-bottom 31px
+        padding-bottom 62px
         background url("~@/assets/imgs/mobile/contact/branches.png") 0 bottom no-repeat
         background-size 100%
         .title
           &:after
             content '分支机构'
         .desc
-          font-size 12px
+          font-size 24px
           color #515151
-          line-height 17px
-          margin-bottom 25px
+          line-height 24px
+          margin-bottom 50px
         .list
           border-bottom 1px solid #E6E6E7
           font-size 0
           display flex
-          margin-bottom 17px
+          margin-bottom 34px
           .li
             flex  1
-            padding 0 0 6px
-            line-height 17px
-            font-size 12px
-            min-width 20px
+            padding 0 0 12px
+            line-height 34px
+            font-size 24px
+            min-width 40px
             &.cur
               background url("~@/assets/imgs/pc/contact/underline.png") center bottom no-repeat
               background-size 100%
         .company
-          font-size 12px
-          line-height 17px
-          margin-bottom 12px
+          font-size 24px
+          line-height 34px
+          margin-bottom 24px
         .text
           transform scale(0.916)
           transform-origin 0 0
-          padding-left 23px
-          line-height 17px
-          margin-bottom 9px
-          font-size 12px
+          padding-left 46px
+          line-height 34px
+          margin-bottom 18px
+          font-size 24px
           &.address
             background url("~@/assets/imgs/pc/contact/icon-address.png") 1px center no-repeat
-            background-size 12px
+            background-size 24px
           &.tel
             background url("~@/assets/imgs/pc/contact/icon-tel.png") left center no-repeat
-            background-size 13px
+            background-size 26px
           &.postcode
             background url("~@/assets/imgs/pc/contact/icon-postcode.png") left center no-repeat
-            background-size 13px
+            background-size 26px
         .map
-          margin-top 27px
+          margin-top 54px
           width auto
-          height 300px
+          height 600px
           >>> .BMap_bubble_title
-            font-size 12px
+            font-size 24px
           >>> .BMap_bubble_center
               .BMap_bubble_content
-                font-size 12px
+                font-size 24px
       &.service
-        padding-top 31px
-        padding-bottom 149px
+        padding-top 62px
+        padding-bottom 298px
         background #fff
         position relative
         &:after
@@ -287,21 +287,21 @@ export default {
           position absolute
           right 0
           bottom 0
-          width 171px
-          height 149px
-          box-shadow 0 0 40px 30px inset #fff
+          width 342px
+          height 298px
+          box-shadow 0 0 80px 60px inset #fff
           background url("~@/assets/imgs/mobile/contact/cus-service.png") 0 no-repeat
           background-size 100%
         .title
           &:after
             content '客服'
         .desc
-          padding-left 29px
+          padding-left 42px
           background url("~@/assets/imgs/pc/contact/icon-tel.png") 0 center no-repeat
-          background-size 19px
-          font-size 16px
+          background-size 26px
+          font-size 24px
           color #515151
-          line-height 22px
+          line-height 34px
           span
             color #ff6622
 </style>

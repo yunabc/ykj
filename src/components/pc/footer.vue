@@ -292,43 +292,43 @@ export default {
   .footer
     color #C5C7CA
     background-color #333
-    padding 30px 14px 23px
+    padding 60px 28px 46px
     flex 0 1 auto
     .top
       display block
       position relative
       z-index 1
-      margin-bottom 13px
-      padding-bottom 24px
+      margin-bottom 26px
+      padding-bottom 48px
       border-bottom 1px solid #626161
       .left
-        width 300px
+        width 600px
         .company
-          width 126px
-          height 33px
+          width 252px
+          height 66px
           background url("~@/assets/imgs/pc/components/logo.png") 0 no-repeat
           background-size 100%
-          margin-bottom 9px
+          margin-bottom 18px
         .label
-          font-size 12px
-          line-height 24px
-          padding-left 35px
+          font-size 24px
+          line-height 48px
+          padding-left 70px
           margin-bottom 0
           transform-origin 0 0
           transform scale(0.916)
           span
             vertical-align middle
-            font-size 12px
+            font-size 24px
         .icon-address
           background url("~@/assets/imgs/pc/components/icon-address.png") 0 center no-repeat
-          background-size 14px
+          background-size 28px
         .icon-tel
           background url("~@/assets/imgs/pc/components/icon-tel.png") 0 center no-repeat
-          background-size 14px
+          background-size 28px
       .right
         text-align right
         position absolute
-        top 5px
+        top 10px
         left 50%
         .inline-b
           display inline-block
@@ -339,9 +339,9 @@ export default {
           display flex
           margin-bottom 0
           .li
-            width 24px
-            height 24px
-            margin-right 120px
+            width 48px
+            height 48px
+            margin-right 240px
             border-radius 50%
             border 1px solid #6F7073
             position relative
@@ -366,18 +366,18 @@ export default {
                 width 100%
             &.icon-weixin
               background url("~@/assets/imgs/pc/components/icon-weixin.png") center no-repeat
-              background-size 14px
+              background-size 28px
             &.icon-sina
               background url("~@/assets/imgs/pc/components/icon-sina.png") center no-repeat
-              background-size 14px
+              background-size 28px
             &.icon-tiktalk
               background url("~@/assets/imgs/pc/components/icon-tiktalk.png") center no-repeat
-              background-size 14px
+              background-size 28px
 
     .bottom
       color #C5C7CA
-      font-size 12px
-      line-height 24px
+      font-size 24px
+      line-height 48px
       transform scale(0.916)
       text-align center
 
