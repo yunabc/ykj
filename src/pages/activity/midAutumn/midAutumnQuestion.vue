@@ -106,7 +106,7 @@ export default {
         {
           question: '2. ⽣活中，你更喜欢看哪类新闻',
           options: [
-            '商业累',
+            '商业类',
             '社会类',
             '娱乐类'
           ]
@@ -518,7 +518,7 @@ export default {
       //   margin-bottom 40px
       .options
         .option
-          width 80%
+          width 90%
           padding-right 30px
     .moon4
       height 624px
