@@ -16,7 +16,9 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const env = require('../config/prod.env')
+const SpeedMeasurePlugin=require('speed-measure-webpack-plugin')
 
+const smp = new SpeedMeasurePlugin();
 let plugins = [
   // http://vuejs.github.io/vue-loader/en/workflow/production.html
   new webpack.DefinePlugin({
@@ -200,4 +202,4 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
 
-module.exports = webpackConfig
+module.exports = smp.wrap(webpackConfig)
