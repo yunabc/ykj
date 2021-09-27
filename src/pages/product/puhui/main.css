@@ -331,7 +331,7 @@ input:-internal-autofill-selected{
 
   .test_cases .cases_title {
       margin: .86667rem .26667rem 1.73333rem;
-      background: url("~@/assets/imgs/product/puhui/case_banner.png") no-repeat;
+      background: url("~@/assets/imgs/product/puhui/bg-ta.png") no-repeat;
       background-size: 100% 100%;
       height: 4.10667rem;
       padding-top: .4rem;
@@ -355,13 +355,13 @@ input:-internal-autofill-selected{
       display: inline-block;
       font-family: PingFangSC-Semibold;
       font-size: .48rem;
-      color: #393D46
+      color: #ff6622
   }
 
   .test_cases .cases_title .cases_info .info_name span:nth-of-type(2) {
       width: .05333rem;
       height: .34667rem;
-      background: #393D46;
+      background: #ff6622;
       margin: 0 .21333rem 0
   }
 
@@ -372,17 +372,16 @@ input:-internal-autofill-selected{
   }
 
   .test_cases .cases_title_content {
-      width: 8.93333rem;
       margin: .35333rem auto .45333rem;
       background: #fff;
-      box-shadow: 0 .02667rem .22667rem 0 #f7be87;
+      border: 1px solid #ff8c24;
       border-radius: .16rem;
       padding: .37333rem 0 .6rem 
   }
 
   .test_cases .cases_title_content .text {
       margin: 0 .33333rem .18667rem .29333rem;
-      background: #fff6f1;
+      background: #f9f9f9;
       display: flex;
       align-items: center;
       padding: .23333rem 0;
@@ -396,16 +395,15 @@ input:-internal-autofill-selected{
   }
 
   .test_cases .claim {
-      width: 8.93333rem;
-      margin: 0 auto 0;
+      margin: 0 .26667rem 0;
       background: #fff;
       border-radius: .16rem;
       padding: .4rem 0;
-      box-shadow: 0 .02667rem .22667rem 0 #f7be87;
+      border: 1px solid #ff8c24;
   }
 
   .test_cases .claim .insurance {
-      width: 8.30667rem;
+      width: 680px;
       margin: .8rem auto .26667rem;
       padding: .33333rem .12333rem .4rem .12rem;
       border-radius: .21333rem;
@@ -467,7 +465,8 @@ input:-internal-autofill-selected{
       line-height: 38px;
       color: #393D46;
       margin-bottom: .16rem;
-      margin-left: .34667rem
+      margin-left: .34667rem;
+      padding-right:20px;
   }
 
   .test_cases .claim .insurance .content .content_text .span_color {

@@ -48,11 +48,11 @@
             ABOUT US
           </div>
           <div class="desc animat-fadeInUp">
-              易康吉成立于2016年8月，是由易联众信息技术股份有限公司（股票代码： 300096）投资的全国性的保险经纪公司。公司注册地在辽宁省沈阳市，实缴注 册资金5000万。
+              易康吉成立于2016年8月，是由易联众信息技术股份有限公司（股票代码：300096）投资的全国性的保险经纪公司。公司注册地在辽宁省沈阳市，实缴注册资金5000万。
               2017年起陆续在北京、上海、厦门、江苏等地成立省级分公司，扩大了易康吉全国服务网络。
           </div>
           <div class="desc animat-fadeInUp">
-            2021年，公司将进一步贯彻集团公司“让天下没有难过的人生”的企业使命，紧跟 “以数字化重塑民生健康新生态”的企业愿景，本着“专注、创新、开放、协同”的 价值观，打造新型“数字化”易康吉。
+            2021年，公司将进一步贯彻集团公司“让天下没有难过的人生”的企业使命，紧跟“以数字化重塑民生健康新生态”的企业愿景，本着“专注、创新、开放、协同”的价值观，打造新型“数字化”易康吉。
           </div>
         </div>
         <div class="right">
@@ -244,15 +244,15 @@ export default {
         },
         2018: {
           title: '',
-          desc: '易康吉上海分公司成立2018年实现主营业务收入4472万元'
+          desc: '易康吉上海分公司成立'
         },
         2019: {
           title: '',
-          desc: '易康吉安徽、厦门、江苏、分公司在各地成立2019年实现主营业务收入1580余万元'
+          desc: '易康吉安徽、厦门、江苏分公司在各地成立'
         },
         2020: {
           title: '',
-          desc: '2020年实现主营业务收入11931.71万元'
+          desc: '2020年实现主营业务收入11955.43万元'
         },
         2021: {
           title: '数字化转型',
@@ -558,12 +558,13 @@ export default {
         background-position 0 0,640rem 0,1280rem 0
         background-size 640rem 100%,640rem 100%,640rem 100%
         background-repeat no-repeat,no-repeat,no-repeat
+        color #855C4E
       &.slide2
         background url("~@/assets/imgs/pc/home/slide2_01.jpg"),url("~@/assets/imgs/pc/home/slide2_02.jpg"),url("~@/assets/imgs/pc/home/slide2_03.jpg")
         background-position 0 0,640rem 0,1280rem 0
         background-size 640rem 100%,640rem 100%,640rem 100%
         background-repeat no-repeat,no-repeat,no-repeat
-  
+        color #204979
         .text-box
           .txt1
             &:after
@@ -573,6 +574,7 @@ export default {
         background-position 0 0,640rem 0,1280rem 0
         background-size 640rem 100%,640rem 100%,640rem 100%
         background-repeat no-repeat,no-repeat,no-repeat
+        color #395A96
         .text-box
           .txt1
             &:after
@@ -639,11 +641,15 @@ export default {
             font-weight bold
         .desc
           line-height 24rem
-          font-size 16rem
+          font-size 18rem
           color #515356
     &.mountain
-      background url("~@/assets/imgs/pc/home/mountain.png") left bottom no-repeat
-      background-size 100%
+      background url("~@/assets/imgs/pc/home/mountain_01.png"),url("~@/assets/imgs/pc/home/mountain_02.png"),url("~@/assets/imgs/pc/home/mountain_03.png"),url("~@/assets/imgs/pc/home/mountain_04.png")
+      background-position 0 bottom,640rem bottom,1280rem bottom,1600rem bottom
+      background-size 640rem,640rem,320rem,320rem
+      background-repeat no-repeat,no-repeat,no-repeat,no-repeat
+      // background url("~@/assets/imgs/pc/home/mountain2.png") left bottom no-repeat
+      // background-size 100%
       height 1080rem
       .text-box
         .left
@@ -760,7 +766,7 @@ export default {
     &.map
       padding-right 160rem
       padding-bottom 100rem
-      background url("~@/assets/imgs/pc/home/branch_bg.png") 0 bottom no-repeat
+      background url("~@/assets/imgs/pc/home/branch_bg.jpg") 0 bottom no-repeat
       background-size 100% 100%
       position relative
       overflow hidden
@@ -933,13 +939,13 @@ export default {
       .swiper-slide
         height 984px
         &.slide1
-          background url("~@/assets/imgs/mobile/home/m-slide1.png") 0 no-repeat
+          background url("~@/assets/imgs/mobile/home/m-slide1.jpg") 0 no-repeat
           background-size 100% 100%
         &.slide2
-          background url("~@/assets/imgs/mobile/home/m-slide2.png") 0 no-repeat
+          background url("~@/assets/imgs/mobile/home/m-slide2.jpg") 0 no-repeat
           background-size 100% 100%
         &.slide3
-          background url("~@/assets/imgs/mobile/home/m-slide3.png") 0 no-repeat
+          background url("~@/assets/imgs/mobile/home/m-slide3.jpg") 0 no-repeat
           background-size 100% 100%
         .text-box
           left 0
@@ -1060,7 +1066,7 @@ export default {
           .year
             position absolute
             text-align center
-            width 80px
+            width 90px
             line-height 34px
             font-size 24px
             color #4A4A4A
@@ -1075,16 +1081,18 @@ export default {
               transition all 0.3s
               content ''
               position absolute
-              left 30px
+              left 50%
+              box-sizing border-box
               // margin-left -10px
               bottom 90px
               border-radius 50%
-              width 12px
-              height 12px
+              width 20px
+              height 20px
+              margin-left -10px
               background-color #ff6622
               border 4px solid #FACDB8
             &.pos2016
-              left 0px
+              left 10px
               bottom 100px
             &.pos2017
               left 134px

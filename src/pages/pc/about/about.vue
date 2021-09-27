@@ -7,13 +7,13 @@
           COMPANY PROFILE
         </div>
         <div class="desc animat-fadeInRight">
-          易康吉成立于2016年8月，是由易联众信息技术股份有限公司（股票代码： 300096）投资的全国性的保险经纪公司。公司注册地在辽宁省沈阳市，实缴注 册资金5000万。
+          易康吉成立于2016年8月，是由易联众信息技术股份有限公司（股票代码：300096）投资的全国性的保险经纪公司。公司注册地在辽宁省沈阳市，实缴注册资金5000万。
         </div>
         <div class="desc animat-fadeInRight">
           2017年起陆续在北京、上海、厦门、江苏等地成立省级分公司，扩大了易康吉全国服务网络。
         </div>
         <div class="desc animat-fadeInRight">
-          2021年，公司将进一步贯彻集团公司“让天下没有难过的人生”的企业使命，紧跟 “以数字化重塑民生健康新生态”的企业愿景，本着“专注、创新、开放、协同”的 价值观，打造新型“数字化”易康吉。
+          2021年，公司将进一步贯彻集团公司“让天下没有难过的人生”的企业使命，紧跟“以数字化重塑民生健康新生态”的企业愿景，本着“专注、创新、开放、协同”的价值观，打造新型“数字化”易康吉。
         </div>
       </div>
       <div class="left" />
@@ -26,7 +26,7 @@
         <div class="li">
           <div class="imgbox icon1">
             <img
-              src="@/assets/imgs/pc/about/business1.png"
+              src="@/assets/imgs/pc/about/business1.jpg"
               alt=""
             >
           </div>
@@ -37,7 +37,7 @@
         <div class="li">
           <div class="imgbox icon2">
             <img
-              src="@/assets/imgs/pc/about/business2.png"
+              src="@/assets/imgs/pc/about/business2.jpg"
               alt=""
             >
           </div>
@@ -48,12 +48,12 @@
         <div class="li">
           <div class="imgbox icon3">
             <img
-              src="@/assets/imgs/pc/about/business3.png"
+              src="@/assets/imgs/pc/about/business3.jpg"
               alt=""
             >
           </div>
           <div class="text  animat-fadeInUp">
-            垂直类业务场景
+            垂直类场景业务
           </div>
         </div>
       </div>
@@ -140,14 +140,14 @@ export default {
         float left
         width 960rem
         height 573rem
-        background url("~@/assets/imgs/pc/about/company.png") 0 no-repeat
+        background url("~@/assets/imgs/pc/about/company.jpg") 0 no-repeat
         background-size 100%
       .right
         width 920rem
         float right
         .desc
           width 565rem
-          font-size 16rem
+          font-size 18rem
           color #5d5d5d
           line-height 24rem
           margin-bottom 22rem
@@ -266,7 +266,7 @@ export default {
   .about
     .top
       height 200px
-      background url("~@/assets/imgs/mobile/about/top.png") 0 no-repeat
+      background url("~@/assets/imgs/mobile/about/top.jpg") 0 no-repeat
       background-size 100%
     .block
       &.company
@@ -277,7 +277,7 @@ export default {
           margin-right 0
           width 100%
           height 698px
-          background url("~@/assets/imgs/mobile/about/company.png") 0 no-repeat
+          background url("~@/assets/imgs/mobile/about/company.jpg") 0 no-repeat
           background-size 100%
         .right
           float none
@@ -357,7 +357,7 @@ export default {
                 top 15px
                 background-color #e6e6e7
       &.culture
-        background url("~@/assets/imgs/mobile/about/culture.png") 0 no-repeat
+        background url("~@/assets/imgs/mobile/about/culture.jpg") 0 no-repeat
         background-size 100% 100%
         padding 60px 30px 0
         padding-bottom 0px

@@ -131,12 +131,12 @@ export default {
 .contact
   .top
     height 320rem
-    background url("~@/assets/imgs/pc/contact/top.png") 0 no-repeat
+    background url("~@/assets/imgs/pc/contact/top.jpg") 0 no-repeat
     background-size 100%
   .block
     &.branches
       padding-bottom 82rem
-      background url("~@/assets/imgs/pc/contact/branches.png") 0 bottom no-repeat
+      background url("~@/assets/imgs/pc/contact/branches.jpg") 0 bottom no-repeat
       background-size 100%
       .title
         &:after
@@ -189,8 +189,8 @@ export default {
         height 600rem
     &.service
       padding-bottom 382rem
-      background url("~@/assets/imgs/pc/contact/cus-service.png") 0 bottom no-repeat
-      background-size 100%
+      background url("~@/assets/imgs/pc/contact/cus-service_02.jpg") right bottom no-repeat
+      background-size auto 100%
       // &:after
       //   content ''
       //   position absolute
@@ -218,7 +218,7 @@ export default {
   .contact
     .top
       height 200px
-      background url("~@/assets/imgs/mobile/contact/top.png") 0 no-repeat
+      background url("~@/assets/imgs/mobile/contact/top.jpg") 0 no-repeat
       background-size 100%
     .block
       padding 60px 30px 0
@@ -232,7 +232,7 @@ export default {
         .desc
           font-size 24px
           color #515151
-          line-height 24px
+          line-height 32px
           margin-bottom 50px
         .list
           border-bottom 1px solid #E6E6E7

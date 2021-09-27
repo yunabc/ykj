@@ -260,7 +260,7 @@ export default {
               top -2rem
               transform translate(-50%,-100%)
               box-sizing border-box
-              border 1rem dashed #F5F5F5
+              // border 1rem dashed #F5F5F5
               img
                 width 100%
             &.icon-weixin
@@ -361,7 +361,7 @@ export default {
                 align-items center
                 justify-content center
                 img
-                  width 30%
+                  width 50%
               img
                 width 100%
             &.icon-weixin

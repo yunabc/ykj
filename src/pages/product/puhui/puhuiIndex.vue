@@ -498,7 +498,7 @@
           <div class="cases_title_content">
             <div class="text">
               <div>
-                <span class="niu">参保</span>2021年7月起参保，年保费195元
+                <span class="niu">参保</span>2021年7月起参保，年保费95元
               </div>
             </div>
             <div class="text">
@@ -617,7 +617,7 @@
             </div>
             <div class="content_text">
               Y先生购买安阳普惠健康保
-              <span class="span_color">花费195元</span>，选择国内特药安阳普惠健康保
+              <span class="span_color">花费95元</span>，选择国内特药安阳普惠健康保
               <span class="span_color">合计赔付44.45万元</span>，选择海外特药安阳普惠健康保
               <span class="span_color">合计赔付53.84万元</span>。
             </div>
@@ -1515,7 +1515,7 @@ export default {
           length++;
         }
       }
-      return length * this.singlePrice;
+      return length>0?length * this.singlePrice:this.singlePrice;
     }
   },
   watch: {
@@ -2172,15 +2172,15 @@ export default {
       .feature
         position relative
         &.feature1
-          height 919px
+          height 918px
           background url('~@/assets/imgs/product/puhui/pro1.jpg') 0 top no-repeat
           background-size 100%
         &.feature2
-          height 1072px
+          height 1074px
           background url('~@/assets/imgs/product/puhui/pro2.jpg') 0 top no-repeat
           background-size 100%
         &.feature3
-          height 1053px
+          height 1050px
           background url('~@/assets/imgs/product/puhui/pro3.jpg') 0 top no-repeat
           background-size 100%
         .maskbtn
@@ -2192,11 +2192,11 @@ export default {
           left 50%
           margin-left -200px
         &.feature4
-          height 958px
+          height 956px
           background url('~@/assets/imgs/product/puhui/pro4.jpg') 0 top no-repeat
           background-size 100%
         &.feature5
-          height 1091px
+          height 1110px
           background url('~@/assets/imgs/product/puhui/pro5.jpg') 0 top no-repeat
           background-size 100%
           background-color #fcf8f5
@@ -2221,7 +2221,7 @@ export default {
             line-height 40px
             background linear-gradient(top,#feb974,#ff7c25);
       .bg_content_text
-        background-color #fffaf5
+        background-color #f9f9f9
         padding 10px 0
         border-radius 20px
       .claim_text_title

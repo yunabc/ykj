@@ -26,7 +26,7 @@
             class="imgbox"
           >
             <img
-              src="~@/assets/imgs/pc/info/photo1.png"
+              src="~@/assets/imgs/pc/info/photo1.jpg"
               alt=""
             >
             <div
@@ -42,7 +42,7 @@
             class="imgbox"
           >
             <img
-              src="~@/assets/imgs/pc/info/photo2.png"
+              src="~@/assets/imgs/pc/info/photo2.jpg"
               alt=""
             >
             <div
@@ -95,7 +95,7 @@
             <div class="right textCenter lineHeight">
               <a
                 class="blue"
-                href="www.ekangji.com"
+                href="//www.ekangji.com"
                 target="_blank"
               >www.ekangji.com</a>
             </div>
@@ -248,17 +248,17 @@ export default {
       list: [
         {
           msrc:
-            require('@/assets/imgs/pc/info/photo1.png'),
+            require('@/assets/imgs/pc/info/photo1.jpg'),
           src:
-            require('@/assets/imgs/pc/info/certificate.png'),
+            require('@/assets/imgs/pc/info/certificate.jpg'),
           w: 1026,
           h: 738
         },
         {
           msrc:
-            require('@/assets/imgs/pc/info/photo2.png'),
+            require('@/assets/imgs/pc/info/photo2.jpg'),
           src:
-            require('@/assets/imgs/pc/info/license.png'),
+            require('@/assets/imgs/pc/info/license.jpg'),
           w: 1022,
           h: 738
         }
@@ -354,7 +354,7 @@ export default {
   .top
     height 320rem
     position relative
-    background url("~@/assets/imgs/pc/info/top.png") 0 no-repeat
+    background url("~@/assets/imgs/pc/info/top.jpg") 0 no-repeat
     background-size 100% 100%
     // img
       // width 100%
@@ -501,6 +501,7 @@ export default {
             color #E54141
 
         .net
+          font-size 16rem
           display flex
           >.left
             flex 1
@@ -549,7 +550,7 @@ export default {
       width 2px
   .info
     .top
-      background url("~@/assets/imgs/mobile/info/top.png") 0 no-repeat
+      background url("~@/assets/imgs/mobile/info/top.jpg") 0 no-repeat
       background-size 100%
       height 200px
       .tabs
@@ -642,9 +643,9 @@ export default {
             font-size 24px
             &.mTable
               >.left
-                flex 0 0 36%
+                flex 0 0 42%
               >.right
-                flex 0 0 33%
+                flex 0 0 27%
               >.center
                 flex 0 0 31%
             >.left
@@ -664,9 +665,10 @@ export default {
             &.table3
               .line
                 >.left
-                  flex 0 0 36%
+                  flex 0 0 42%
                 >.right
-                  flex 0 0 33%
+                  flex 0 0 27%
+                  text-align center
                 >.center
                   flex 0 0 31%
 

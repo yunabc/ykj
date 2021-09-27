@@ -98,7 +98,7 @@ export default {
 
                 <p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:等线"><span style="font-size:7.5.0pt"><span style="font-family:仿宋">本保险合同属于费用补偿型医疗保险。被保险人已经从基本医疗保险、大病保险、医疗救助和任何第三方（包括任何商业医疗保险）获得相关医疗费用补偿的，保险人仅对扣除已获得补偿后的剩余部分医疗费用，按照本保险合同的约定承担给付保险金的责任。</span></span></span></span></p>
 
-                <p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:等线"><span style="font-size:7.5.0pt"><span style="font-family:仿宋">投保年龄与保费高低的关联性情况：投保年龄与保费无关，均为195元/人/年。</span></span></span></span></p>
+                <p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:等线"><span style="font-size:7.5.0pt"><span style="font-family:仿宋">投保年龄与保费高低的关联性情况：投保年龄与保费无关，均为95元/人/年。</span></span></span></span></p>
 
                 <p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:等线"><span style="font-size:7.5.0pt"><span style="font-family:仿宋">（五）<b>关于享受医疗费用保险责任的约定</b></span></span></span></span></p>
 
@@ -251,7 +251,7 @@ export default {
 
 <p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:11.0pt"><span style="font-family:仿宋_GB2312">八、投保年龄与保费高低的关联性情况</span></span></b></span></span></p>
 
-<p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:11.0pt"><span style="font-family:仿宋_GB2312">投保年龄与保费无关，均为195元/人/年。</span></span></span></span></p>
+<p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:11.0pt"><span style="font-family:仿宋_GB2312">投保年龄与保费无关，均为95元/人/年。</span></span></span></span></p>
 
 <p style="margin:0cm; text-align:justify"><span style="font-size:10.5pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:11.0pt"><span style="font-family:仿宋_GB2312">九、医保个人信息查询及短信息发送授权</span></span></b></span></span></p>
 

@@ -3,7 +3,7 @@
     <div class="win">
       
       <div class="win-title"><span>消费者权益保障服务</span></div>
-      <div class="content">尊敬的客户，您即将进入<span class="orange">北京普惠健康保产品投保流程</span>。根据中国银保监会有关规定，为了保障您的权益，您在销售页面的操作将会被记录和保存。请您在投保时仔细阅读保险条款、投保须知、 <span  class="blue color_click" @click.stop="$emit('showdoc-event')"> 《客户告知书》 </span>等内容。</div>
+      <div class="content">尊敬的客户，您即将进入<span class="orange">安阳普惠健康保产品投保流程</span>。根据中国银保监会有关规定，为了保障您的权益，您在销售页面的操作将会被记录和保存。请您在投保时仔细阅读保险条款、投保须知、 <span  class="blue color_click" @click.stop="$emit('showdoc-event')"> 《客户告知书》 </span>等内容。</div>
       <div class="desc">本产品由中国人民财产保险股份有限公司、中国人寿财产保险股份有限公司、泰康养老保险股份有限公司、中国太平洋人寿保险股份有限公司和中国平安财产保险股份有限公司共同承保，由易康吉保险经纪有限公司提供保险经纪服务并代收保费。</div>
       <div class="footer">
         <div class="btn" @click="notifyHandler">我已知晓</div>
