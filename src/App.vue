@@ -11,8 +11,8 @@
         v-wechat-title="titlemsg"
       />
     </keep-alive>
-    <!-- <router-view v-if="!$route.meta.keepAlive" v-wechat-title="titlemsg"></router-view> -->
-    <router-view />
+    <router-view v-if="!$route.meta.keepAlive" v-wechat-title="titlemsg"></router-view>
+    <!-- <router-view v-else/> -->
   </div>
 </template>
 

@@ -93,6 +93,43 @@ var router = new Router({
       ]
     },
     {
+      path: '/product',
+      redirect: '/404',
+      component: resolve => require(['@/components/mobile/common'], resolve),
+      children: [
+        {
+          path: 'puhui',
+          // redirect: 'puhui/puhuiIndex',
+          component: resolve => require(['@/components/product/puhui/common'], resolve),
+          children:[
+            {
+              path: 'puhuiIndex',
+              name: 'puhuiIndex',
+              component: resolve => require(['@/pages/product/puhui/puhuiIndex'], resolve),
+              meta:{
+                keepAlive:true
+              }
+            },
+            {
+              path: 'puhuiPay',
+              name: 'puhuiPay',
+              component: resolve => require(['@/pages/product/puhui/puhuiPay'], resolve)
+            },
+            {
+              path: 'QA',
+              name: 'QA',
+              component: resolve => require(['@/pages/product/puhui/QA'], resolve)
+            },
+            {
+              path: 'zixun',
+              name: 'zixun',
+              component: resolve => require(['@/pages/product/puhui/zixun'], resolve)
+            },
+          ]
+        }
+      ]
+    },
+    {
       path: '/404',
       component: resolve => require(['@/components/notFound'], resolve),
     }

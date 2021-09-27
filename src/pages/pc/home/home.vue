@@ -301,7 +301,7 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     document.removeEventListener('click', this.changeSlide);
-    window.removeEventListener('click', this.throttleResize);
+    window.removeEventListener('resize', this.throttleResize);
     next();
   },
   methods: {
@@ -554,21 +554,25 @@ export default {
     .swiper-slide
       height 1082rem
       &.slide1
-        background url("~@/assets/imgs/pc/home/slide1.png") 0 no-repeat
-        background-size 100% 100%
-        color #855C4E
+        background url("~@/assets/imgs/pc/home/slide1_01.jpg"),url("~@/assets/imgs/pc/home/slide1_02.jpg"),url("~@/assets/imgs/pc/home/slide1_03.jpg")
+        background-position 0 0,640rem 0,1280rem 0
+        background-size 640rem 100%,640rem 100%,640rem 100%
+        background-repeat no-repeat,no-repeat,no-repeat
       &.slide2
-        background url("~@/assets/imgs/pc/home/slide2.png") 0 no-repeat
-        background-size 100% 100%
-        color #204979
+        background url("~@/assets/imgs/pc/home/slide2_01.jpg"),url("~@/assets/imgs/pc/home/slide2_02.jpg"),url("~@/assets/imgs/pc/home/slide2_03.jpg")
+        background-position 0 0,640rem 0,1280rem 0
+        background-size 640rem 100%,640rem 100%,640rem 100%
+        background-repeat no-repeat,no-repeat,no-repeat
+  
         .text-box
           .txt1
             &:after
               border-color #204979
       &.slide3
-        background url("~@/assets/imgs/pc/home/slide3.png") 0 no-repeat
-        background-size 100% 100%
-        color #395A96
+        background url("~@/assets/imgs/pc/home/slide3_01.jpg"),url("~@/assets/imgs/pc/home/slide3_02.jpg"),url("~@/assets/imgs/pc/home/slide3_03.jpg")
+        background-position 0 0,640rem 0,1280rem 0
+        background-size 640rem 100%,640rem 100%,640rem 100%
+        background-repeat no-repeat,no-repeat,no-repeat
         .text-box
           .txt1
             &:after
