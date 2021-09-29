@@ -1,76 +1,123 @@
+
 <template>
-  <div
-    v-show="showLoading"
-    class="loading"
-  >
-    <div class="loader">
-      <div />
+  <div class="loading-wrap" :class="slowHide?'hide':''" v-if="showFlag">
+    <div
+      class="loading"
+    >
+      <div
+        class="lds-ring"
+      >
+        <div /><div /><div /><div />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
-/* 与 Loading.vue 的区别: .loading 的定位方式改成了 absolute, 方便自适应盒子大小 */
-
 export default {
-  name: 'Loading2',
-  computed: {
-    showLoading() {
-      return this.$store.state.showLoading;
+  name: '',
+  data() {
+    return {
+      showFlag:true,
+      slowHide:false,
+    };
+  },
+  methods:{
+    hide(){
+      this.slowHide = true
+      setTimeout(()=>this.showFlag = false,1000)
+      // this.showFlag = false
     }
   }
 };
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
+.loading-wrap{
+  position fixed
+  width 100%
+  height 100%
+  background #fff
+  z-index 10
+  left 0
+  top 0
+  transition opacity 1s
+  &.hide{
+    opacity 0
+  }
+}
 .loading {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2000;
+    width: 100rem;
+    height: 100rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
-.loader {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 50%;
-  margin-top: -30px;
-  left: 50%;
-  margin-left: -30px;
-   background-color: transparent;
-  /* border-radius: 5px; */
-  /* z-index: 10006; */
-  /* overflow: hidden; */
-}
-.loader > div {
-  border-radius: 100%;
-  margin: 1px;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  border: 4px solid #FFA100;
-  border-bottom-color: transparent;
-  height: 48px;
-  width: 48px;
-  /* background: transparent !important; */
-  /* display: inline-block; */
-  -webkit-animation: rotate 0.75s 0s linear infinite;
-          animation: rotate 0.75s 0s linear infinite;
-}
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
 
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80rem;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
 
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64rem;
+    height: 64rem;
+    margin: 8rem;
+    border: 8rem solid #ff5c31;
+    border-radius: 50%;
+    -webkit-animation: lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;
+    animation: lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;
+    border-color: #fe5e17 transparent transparent transparent
+}
+
+.lds-ring div:first-child {
+    -webkit-animation-delay: -.45s;
+    animation-delay: -.45s
+}
+
+.lds-ring div:nth-child(2) {
+    -webkit-animation-delay: -.3s;
+    animation-delay: -.3s
+}
+
+.lds-ring div:nth-child(3) {
+    -webkit-animation-delay: -.15s;
+    animation-delay: -.15s
+}
+
+@-webkit-keyframes lds-ring {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
 
 </style>

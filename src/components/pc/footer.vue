@@ -150,7 +150,7 @@
       </div>
     </div>
     <div class="bottom">
-      <span>@易康吉保险经纪有限责任公司</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="https://beian.miit.gov.cn" target="_blank">辽ICP备17004821号-1</a></span>
+      <span>@易康吉保险经纪有限责任公司</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="//beian.miit.gov.cn" target="_blank">辽ICP备17004821号-1</a></span>
     </div>
   </div>
 </template>

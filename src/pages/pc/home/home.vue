@@ -48,8 +48,8 @@
             ABOUT US
           </div>
           <div class="desc animat-fadeInUp">
-              易康吉成立于2016年8月，是由易联众信息技术股份有限公司（股票代码：300096）投资的全国性的保险经纪公司。公司注册地在辽宁省沈阳市，实缴注册资金5000万。
-              2017年起陆续在北京、上海、厦门、江苏等地成立省级分公司，扩大了易康吉全国服务网络。
+            易康吉成立于2016年8月，是由易联众信息技术股份有限公司（股票代码：300096）投资的全国性的保险经纪公司。公司注册地在辽宁省沈阳市，实缴注册资金5000万。
+            2017年起陆续在北京、上海、厦门、江苏等地成立省级分公司，扩大了易康吉全国服务网络。
           </div>
           <div class="desc animat-fadeInUp">
             2021年，公司将进一步贯彻集团公司“让天下没有难过的人生”的企业使命，紧跟“以数字化重塑民生健康新生态”的企业愿景，本着“专注、创新、开放、协同”的价值观，打造新型“数字化”易康吉。
@@ -103,12 +103,27 @@
     </div>
     <div class="block map show">
       <div class="bg animat-linearbig" />
-      <div class="tool-tips-container dis_none" v-if="showMobileCompanyInfo">
-        <div class="line"></div>
-        <h4> 公司名称：{{curCompany.company}}</h4>
-        <div class="content">地址：{{curCompany.address}}</div>
-        <div class="content" v-if="curCompany.tel">电话：{{curCompany.tel}}</div>
-        <div class="content" v-if="curCompany.postcode">邮编：{{curCompany.postcode}}</div>
+      <div
+        v-if="showMobileCompanyInfo"
+        class="tool-tips-container dis_none"
+      >
+        <div class="line" />
+        <h4> 公司名称：{{ curCompany.company }}</h4>
+        <div class="content">
+          地址：{{ curCompany.address }}
+        </div>
+        <div
+          v-if="curCompany.tel"
+          class="content"
+        >
+          电话：{{ curCompany.tel }}
+        </div>
+        <div
+          v-if="curCompany.postcode"
+          class="content"
+        >
+          邮编：{{ curCompany.postcode }}
+        </div>
       </div>
       <div class="content">
         <div class="text-box">
@@ -153,8 +168,8 @@
         </div>
         <div
           ref="myEchart"
-          class="map-container"
           @click.stop="showMobileCompanyInfo=false"
+          class="map-container"
         />
         <div
           @click.stop="toPage('./contact')"
@@ -205,27 +220,32 @@
         class="goBtn pos-partner"
       />
     </div>
+    <v-loading ref="loading" />
   </div>
 </template>
 
 <script>
 // import vHeader from '@/components/pc/header'
+import vLoading from '@/components/pc/Loading';
 import 'swiper/css/swiper.min.css';
 import Swiper from 'swiper';
 import * as echarts from 'echarts';
 import china from 'js/china.js';
 import branches from 'js/branches.js';
 import { throttle, isM } from 'js/util';
-  import inViewAnimate from '@/mixins/inViewAnimate'
+import inViewAnimate from '@/mixins/inViewAnimate';
+import { preLoadImage } from 'js/preLoadImage.js';
 export default {
   name: '',
-  mixins:[inViewAnimate],
   components: {
     // vHeader
+    vLoading
   },
+  mixins: [inViewAnimate],
   data() {
     return {
-      timer:null,
+      autoInitInViewAnimate: false,
+      timer: null,
       mySwiper: null,
       curYear: 2016,
       min: 2016,
@@ -259,8 +279,8 @@ export default {
           desc: '构建以用户为中心的保啦&易康吉数字化保险保障运营销售平台生态'
         }
       },
-      curCompany:null,
-      showMobileCompanyInfo:false,
+      curCompany: null,
+      showMobileCompanyInfo: false,
       branches: [
         {
           name: '辽宁',
@@ -281,7 +301,7 @@ export default {
         {
           name: '江苏',
           index: 5
-        },
+        }
         // {
         //   name: '山东',
         //   index: 6
@@ -291,13 +311,14 @@ export default {
   },
   created() {
     this.branch = this.branches[0];
-    this.curCompany = branches['北京']
+    this.curCompany = branches['北京'];
+    this.preLoadImage();
   },
   mounted() {
     this.initSwiper();
     this.initMap();
     this.bindDocument();
-    this.initChangeYear()
+    this.initChangeYear();
   },
   beforeRouteLeave(to, from, next) {
     document.removeEventListener('click', this.changeSlide);
@@ -305,13 +326,31 @@ export default {
     next();
   },
   methods: {
+    preLoadImage() {
+      if (!isM()) {
+        preLoadImage([
+          require('@/assets/imgs/pc/home/slide1_01.jpg'),
+          require('@/assets/imgs/pc/home/slide1_02.jpg'),
+          require('@/assets/imgs/pc/home/slide1_03.jpg'),
+          require('@/assets/imgs/pc/home/slide2_01.jpg'),
+          require('@/assets/imgs/pc/home/slide2_02.jpg'),
+          require('@/assets/imgs/pc/home/slide2_03.jpg'),
+          require('@/assets/imgs/pc/home/slide3_01.jpg'),
+          require('@/assets/imgs/pc/home/slide3_02.jpg'),
+          require('@/assets/imgs/pc/home/slide3_03.jpg')
+        ], () => {
+          this.$refs.loading.hide();
+          this.initInViewAnimate();
+        });
+      }
+    },
     throttleResize() {
       return throttle(() => this.myEchart.resize(), 200)();
     },
     changeSlide() {
       console.log(1);
       this.slide = false;
-      this.showMobileCompanyInfo =false
+      this.showMobileCompanyInfo = false;
     },
     toPage(path) {
       this.$router.push(path);
@@ -323,19 +362,23 @@ export default {
     },
     initSwiper() {
       this.mySwiper = new Swiper('.swiper-container', {
-        autoplay: true, // 可选选项，自动滑动
+        autoplay: {
+          delay:3000
+        },
+        speed:2000,
         loop: true,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
+          delay:1000,
           bulletClass: 'bullet-normal',
           bulletActiveClass: 'active',
           clickable: true
         }
       });
-      this.$nextTick(()=>{
-        this.init()
-      })
+      // this.$nextTick(() => {
+      //   this.init();
+      // });
     },
     calculateSize(num) {
       const dpr = window.devicePixelRatio;
@@ -343,24 +386,23 @@ export default {
       if (dpr == 1) {
         return innerWidth / 1920 * num;
       } else {
-        if(isM()){
-
+        if (isM()) {
           return dpr / 2 * num / 2.5;
-        }else{
+        } else {
           return innerWidth / 1920 * num;
         }
       }
     },
     getMarkPointData() {
       const chinaArr = china.features;
-      let arr = [];
-      let symbol = ''
+      const arr = [];
+      let symbol = '';
       for (var i = chinaArr.length - 1; i >= 0; i--) {
         const item = chinaArr[i];
         const province = item.properties.name;
         if (branches.hasOwnProperty(province)) {
-        console.log(...branches[province].position,...item.properties.cp)
-          let size = this.calculateSize(14)
+          console.log(...branches[province].position, ...item.properties.cp);
+          const size = this.calculateSize(14);
           if (province == '辽宁') {
             symbol = 'image://data:image/png;base64,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';
             arr.unshift({
@@ -375,11 +417,11 @@ export default {
               // coord: branches[province].position,
 
             });
-          }else{
-            let position = branches[province].position
-            if(province == '江苏'){
-              position[1]+=1
-              position[0]-=0.5
+          } else {
+            const position = branches[province].position;
+            if (province == '江苏') {
+              position[1] += 1;
+              position[0] -= 0.5;
             }
             arr.unshift({
               name: province,
@@ -394,30 +436,30 @@ export default {
 
             });
           }
-        } 
+        }
       }
-      console.log(arr)
+      console.log(arr);
       return arr;
     },
     initMap() {
       echarts.registerMap('china', china);
       this.myEchart = echarts.init(this.$refs.myEchart);
-      let tooltip ={
-        show:false
-      }
-      if(!isM()){
-        tooltip =  {
-          triggerOn:'click',
+      let tooltip = {
+        show: false
+      };
+      if (!isM()) {
+        tooltip = {
+          triggerOn: 'click',
           trigger: 'item',
           backgroundColor: '#fff',
-          borderWidth:'0',
-          extraCssText:'white-space:normal',
+          borderWidth: '0',
+          extraCssText: 'white-space:normal',
           formatter: function(params) {
-            console.log(params)
+            console.log(params);
             const tempArr = params.value.slice(2);
             let html = '';
             tempArr.forEach(item => {
-              console.log(item)
+              console.log(item);
               const { company, address, tel, postcode } = item.value || item;
               // if(item.province == '北京'||item.province == '北京'){
 
@@ -425,15 +467,15 @@ export default {
               html += `<div class="tool-tips-container">
                         <div class="line"></div>
                         <h4> 公司名称：${company}</h4>
-                        <div class="tips-divider"></div>`+
-                        (address?`<div class="content">地址：${address}</div>`:'')+
-                        (tel?`<div class="content">电话：${tel}</div>`:'')+
-                        (postcode?`<div class="content">邮编：${postcode ||'暂未公示'}</div>`:'')+
+                        <div class="tips-divider"></div>` +
+                        (address ? `<div class="content">地址：${address}</div>` : '') +
+                        (tel ? `<div class="content">电话：${tel}</div>` : '') +
+                        (postcode ? `<div class="content">邮编：${postcode || '暂未公示'}</div>` : '') +
                       `</div>`;
             });
             return html;
           }
-        }
+        };
       }
       const option = {
         tooltip,
@@ -468,7 +510,7 @@ export default {
             type: 'effectScatter',
             // 使用地理坐标系，通过 geoIndex 指定相应的地理坐标系组件
             coordinateSystem: 'geo',
-            data:this.getMarkPointData(),
+            data: this.getMarkPointData(),
             // 鼠标悬浮的时候在圆点上显示数值
             label: {
               normal: {
@@ -492,37 +534,36 @@ export default {
         ]
       };
       this.myEchart.setOption(option);
-      this.myEchart.on('click', 'series',  (params)=> {
-        console.log(params)
-        this.curCompany = params.data.value[2]
-        setTimeout(()=>{
-          this.showMobileCompanyInfo = true
-        },200)
+      this.myEchart.on('click', 'series', (params) => {
+        console.log(params);
+        this.curCompany = params.data.value[2];
+        setTimeout(() => {
+          this.showMobileCompanyInfo = true;
+        }, 200);
       });
     },
-    chooseYear(count){
-      clearInterval(this.timer)
-      this.curYear=this.min+count-1
-      this.initChangeYear()
-
+    chooseYear(count) {
+      clearInterval(this.timer);
+      this.curYear = this.min + count - 1;
+      this.initChangeYear();
     },
-    handlerBtn(num){
-      clearInterval(this.timer)
-      this.changeYear(num)
-      this.initChangeYear()
+    handlerBtn(num) {
+      clearInterval(this.timer);
+      this.changeYear(num);
+      this.initChangeYear();
     },
     changeYear(num) {
       if ((this.curYear > this.min && num < 0) || (this.curYear < this.max && num > 0)) {
         this.curYear += num;
       }
     },
-    initChangeYear(){
-      this.timer = setInterval(()=>{
-        if(this.curYear==this.max){
-          this.curYear = this.min-1
+    initChangeYear() {
+      this.timer = setInterval(() => {
+        if (this.curYear == this.max) {
+          this.curYear = this.min - 1;
         }
-        this.changeYear(1)
-      },3000)
+        this.changeYear(1);
+      }, 3000);
     }
   }
 };
@@ -865,7 +906,6 @@ export default {
               transition all .4s
               &:hover
                 background-size 40rem,100%
-                
 
       .map-container
         height 780rem

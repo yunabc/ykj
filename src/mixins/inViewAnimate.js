@@ -1,26 +1,29 @@
 import inViewAnimate from 'js/inViewAnimate';
 export default {
-  mounted(){
-    this.init()
+  mounted() {
+    if (this.autoInitInViewAnimate) {
+      this.initInViewAnimate();
+    }
   },
-  beforeRouteLeave (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     // 导航离开该组件的对应路由时调用
-    this.remove()
-    next()
+    this.removeInViewAnimate();
+    next();
   },
-  methods:{
-    resetInViewAnimate(){
+  data() {
+    return {
+      autoInitInViewAnimate: true
 
+    };
+  },
+  methods: {
+    initInViewAnimate() {
+      inViewAnimate.bindObserver('.animat-fadeInUp');
+      inViewAnimate.bindObserver('.animat-fadeInRight');
+      inViewAnimate.bindObserver('.animat-linearbig');
     },
-    init(){
-      inViewAnimate.bindObserver('.animat-fadeInUp')
-      inViewAnimate.bindObserver('.animat-fadeInRight')
-      inViewAnimate.bindObserver('.animat-linearbig')
-      
-    },
-    remove(){
-      inViewAnimate.removeObserver()
-
+    removeInViewAnimate() {
+      inViewAnimate.removeObserver();
     }
   }
-}
+};
