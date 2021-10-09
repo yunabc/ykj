@@ -4,11 +4,12 @@
     @scroll="scrollHandler($event)"
     class="home"
   >
+    <div class="declaration">以下内容为测试环境，仅供演示使用</div>
     <div
       id="con5"
       class="home_banner"
     >
-      <img src="@/assets/imgs/product/puhui/home-banner.png">
+      <img src="@/assets/imgs/product/puhui/home-banner.jpg">
       <div class="home_countdown">
         <div class="foot_date">
           <div class="data_tit">
@@ -1180,7 +1181,7 @@
           </div>
         </div>
         <div class="action_body" v-else>
-          <div class="nodata"><img src="@/assets/imgs/product/puhui/nodata.png" alt=""></div>
+          <div class="nodata"><img src="@/assets/imgs/product/puhui/nodata.jpg" alt=""></div>
           <div class="desc">以正式投保产品相关详情展示为准</div>
         </div>
       </div>
@@ -1977,6 +1978,18 @@ export default {
     outline none
     &::placeholder
       color #C3C3C3
+  .declaration
+    position fixed
+    top 0
+    left 0
+    height 60px
+    background yellow
+    color orange
+    font-size 30px
+    line-height 60px
+    text-align center
+    width 100%
+    z-index 10
   .btn
     width 590px
     margin 70px auto

@@ -315,7 +315,7 @@ export default {
     this.preLoadImage();
   },
   mounted() {
-    this.initSwiper();
+    // this.initSwiper();
     this.initMap();
     this.bindDocument();
     this.initChangeYear();
@@ -327,8 +327,9 @@ export default {
   },
   methods: {
     preLoadImage() {
+      let imgArr;
       if (!isM()) {
-        preLoadImage([
+        imgArr = [
           require('@/assets/imgs/pc/home/slide1_01.jpg'),
           require('@/assets/imgs/pc/home/slide1_02.jpg'),
           require('@/assets/imgs/pc/home/slide1_03.jpg'),
@@ -338,11 +339,19 @@ export default {
           require('@/assets/imgs/pc/home/slide3_01.jpg'),
           require('@/assets/imgs/pc/home/slide3_02.jpg'),
           require('@/assets/imgs/pc/home/slide3_03.jpg')
-        ], () => {
-          this.$refs.loading.hide();
-          this.initInViewAnimate();
-        });
+        ];
+      } else {
+        imgArr = [
+          require('@/assets/imgs/mobile/home/m-slide1.jpg'),
+          require('@/assets/imgs/mobile/home/m-slide2.jpg'),
+          require('@/assets/imgs/mobile/home/m-slide3.jpg')
+        ];
       }
+      preLoadImage(imgArr, () => {
+        this.$refs.loading.hide();
+        this.initSwiper();
+        this.initInViewAnimate();
+      });
     },
     throttleResize() {
       return throttle(() => this.myEchart.resize(), 200)();
@@ -363,14 +372,14 @@ export default {
     initSwiper() {
       this.mySwiper = new Swiper('.swiper-container', {
         autoplay: {
-          delay:3000
+          delay: 3000
         },
-        speed:2000,
+        speed: 2000,
         loop: true,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          delay:1000,
+          delay: 1000,
           bulletClass: 'bullet-normal',
           bulletActiveClass: 'active',
           clickable: true

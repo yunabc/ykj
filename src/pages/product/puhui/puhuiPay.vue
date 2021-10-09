@@ -1,5 +1,6 @@
 <template>
   <div class="container payDetail">
+    <div class="declaration">以下内容为测试环境，仅供演示使用</div>
     <div class="pay_top">
       <img
         src="@/assets/imgs/product/puhui/pay_bg.png"
@@ -403,6 +404,15 @@ export default {
 <style lang="stylus" scoped>
 
   @import './puhuiPay.css'
+  .declaration
+    height 60px
+    background yellow
+    color orange
+    font-size 30px
+    line-height 60px
+    text-align center
+    width 100%
+    z-index 10
   .payDetail
     .pay_con
       .con_list

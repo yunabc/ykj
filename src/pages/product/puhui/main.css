@@ -1790,7 +1790,7 @@ input:-internal-autofill-selected{
       margin: 0 auto;
       /*width: 689px;*/
       height: 170px;
-      background: url('~@/assets/imgs/product/puhui/relation.png') 0 no-repeat;
+      background: url('~@/assets/imgs/product/puhui/relation.jpg') 0 no-repeat;
       background-size: 100%;
   }
 
@@ -2954,7 +2954,7 @@ input:-internal-autofill-selected{
   .home .tab_con .nav-bar.isFixed {
       width: 100%;
       position: fixed;
-      top: 0;
+      top: 60px;
       left: 0;
       z-index: 10
   }

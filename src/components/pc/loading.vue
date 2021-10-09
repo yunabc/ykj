@@ -26,13 +26,13 @@ export default {
     hide(){
       this.slowHide = true
       setTimeout(()=>this.showFlag = false,1000)
-      // this.showFlag = false
     }
   }
 };
 </script>
 
 <style lang="stylus" scoped>
+
 .loading-wrap{
   position fixed
   width 100%
@@ -119,5 +119,21 @@ export default {
         transform: rotate(1turn)
     }
 }
-
+@media(max-width: 999px){
+  .loading {
+      width: 100px;
+      height: 100px;
+  }
+  .lds-ring {
+      width: 80px;
+      height: 80px;
+  }
+  .lds-ring div {
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border: 8px solid #ff5c31;
+      border-color: #fe5e17 transparent transparent transparent
+  }
+}
 </style>
