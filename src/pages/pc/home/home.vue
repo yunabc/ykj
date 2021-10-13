@@ -579,7 +579,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+@import '../../../assets/css/common/fontgoogle.css';
 >>>.bullet-normal
   margin 0 30rem 0 0
   display inline-block
