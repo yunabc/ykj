@@ -1,13 +1,13 @@
 
 <template>
   <div class="loading-wrap" :class="slowHide?'hide':''" v-if="showFlag">
-    <div
-      class="loading"
-    >
-      <div
-        class="lds-ring"
-      >
-        <div /><div /><div /><div />
+    <div class="icon-loading">
+      <div class="border">
+        
+      </div>
+      <div class="shanxing shanxing3">
+        <div class="sx1"></div>
+        <div class="sx2"></div>
       </div>
     </div>
   </div>
@@ -33,7 +33,12 @@ export default {
 
 <style lang="stylus" scoped>
 
-.loading-wrap{
+$width = 100rem
+$sectorWidth = 150rem
+$orange = #f62
+$bg = white
+$borderWidth = 24rem
+.loading-wrap
   position fixed
   width 100%
   height 100%
@@ -42,98 +47,119 @@ export default {
   left 0
   top 0
   transition opacity 1s
-  &.hide{
+  box-sizing border-box
+  &.hide
     opacity 0
-  }
-}
-.loading {
-    width: 100rem;
-    height: 100rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80rem;
-    height: 80rem;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64rem;
-    height: 64rem;
-    margin: 8rem;
-    border: 8rem solid #ff5c31;
-    border-radius: 50%;
-    -webkit-animation: lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;
-    animation: lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;
-    border-color: #fe5e17 transparent transparent transparent
-}
-
-.lds-ring div:first-child {
-    -webkit-animation-delay: -.45s;
-    animation-delay: -.45s
-}
-
-.lds-ring div:nth-child(2) {
-    -webkit-animation-delay: -.3s;
-    animation-delay: -.3s
-}
-
-.lds-ring div:nth-child(3) {
-    -webkit-animation-delay: -.15s;
-    animation-delay: -.15s
-}
-
-@-webkit-keyframes lds-ring {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    to {
-        transform: rotate(1turn)
-    }
-}
-
-@keyframes lds-ring {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    to {
-        transform: rotate(1turn)
-    }
-}
-@media(max-width: 999px){
-  .loading {
-      width: 100px;
-      height: 100px;
-  }
-  .lds-ring {
-      width: 80px;
-      height: 80px;
-  }
-  .lds-ring div {
-      width: 64px;
-      height: 64px;
-      margin: 8px;
-      border: 8px solid #ff5c31;
-      border-color: #fe5e17 transparent transparent transparent
-  }
-}
+  // .loading
+  //   background #fff
+  //   position fixed
+  //   width 100%
+  //   height 100%
+  //   left 0
+  //   top 0
+  .icon-loading
+    width $width
+    height $width
+    position absolute
+    left 50%
+    top 50%
+    margin-top -($width / 2)
+    margin-left -($width / 2)
+    overflow hidden
+    animation mymove1 4s infinite
+    @keyframes mymove1
+      0%
+        border-radius 0px
+        transform rotate(-45deg)
+      25%
+        border-radius 35%
+      50%
+        border-radius 0px
+        transform rotate(-765deg)
+      100%
+        border-radius 0px
+        transform rotate(-765deg)  
+    .border
+      z-index 2
+      position absolute
+      width $width
+      height $width
+      left 0
+      top 0
+      border $borderWidth solid $orange
+    .shanxing
+      z-index 1
+      padding 0 
+      margin 0
+      font-size 0
+      border none
+      position absolute
+      left 0
+      bottom 0
+      transform translate3D(-72%,72%,0)
+      width $sectorWidth
+      height $sectorWidth
+      border-radius ($sectorWidth / 2)
+      background-color $orange
+      animation mymove2 4s infinite
+      @keyframes mymove2
+        0%
+          transform translate3D(-72%,72%,0)
+        50%
+          transform translate3D(-72%,72%,0)
+        70%
+          transform translate3D(-48%,48%,0)
+        80%
+          transform translate3D(-48%,48%,0)
+        100%
+          transform translate3D(-72%,72%,0)  
+      &.shanxing3
+        .sx1
+          transform rotate(0deg)
+        .sx2
+          transform rotate(-90deg)
+      .sx1
+        position absolute
+        width $sectorWidth
+        height $sectorWidth
+        transform rotate(0deg)
+        clip rect(0,($sectorWidth / 2),$sectorWidth,0px)
+        border-radius ($sectorWidth / 2)
+        background-color $bg
+      .sx2
+        position absolute
+        width $sectorWidth
+        height $sectorWidth
+        transform rotate(0deg)
+        clip rect(0,($sectorWidth / 2),$sectorWidth,0px)
+        border-radius ($sectorWidth / 2)
+        background-color $bg
+@media(max-width: 999px) 
+  $width = 100px
+  $sectorWidth = 150px
+  $borderWidth = 24px
+  .loading-wrap
+    .icon-loading
+      width $width
+      height $width
+      margin-top -($width / 2)
+      margin-left -($width / 2)
+      .border
+        width $width
+        height $width
+        border $borderWidth solid $orange
+      .shanxing
+        width $sectorWidth
+        height $sectorWidth
+        border-radius ($sectorWidth / 2)
+        .sx1
+          width $sectorWidth
+          height $sectorWidth
+          clip rect(0,($sectorWidth / 2),$sectorWidth,0px)
+          border-radius ($sectorWidth / 2)
+        .sx2
+          width $sectorWidth
+          height $sectorWidth
+          clip rect(0,($sectorWidth / 2),$sectorWidth,0px)
+          border-radius ($sectorWidth / 2)
 </style>

@@ -150,7 +150,22 @@ var router = new Router({
     {
       path: '/404',
       component: resolve => require(['@/components/notFound'], resolve)
+    },
+    {
+      path: '/test',
+      component: resolve => require(['@/components/test/common'], resolve),
+      children: [
+        {
+          path: 'videoRecord',
+          component: resolve => require(['@/pages/test/videoRecord'], resolve)
+        },
+        {
+          path: 'loading',
+          component: resolve => require(['@/components/pc/loading'], resolve)
+        },
+      ]
     }
+
   ]
 });
 router.beforeEach((to, from, next) => {
