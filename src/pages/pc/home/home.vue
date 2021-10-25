@@ -226,7 +226,7 @@
 
 <script>
 // import vHeader from '@/components/pc/header'
-import vLoading from '@/components/pc/Loading';
+import vLoading from '@/components/pc/loading';
 import 'swiper/css/swiper.min.css';
 import Swiper from 'swiper';
 import * as echarts from 'echarts';
