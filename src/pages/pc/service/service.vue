@@ -41,7 +41,7 @@
             <div class="label">
               （二）
             </div><div class="desc">
-              住所∶辽宁省沈阳市铁西区北二中18 号B座502室
+              住所∶辽宁省沈阳市铁西区北二中18号B座502室
             </div>
           </div>
 
@@ -139,7 +139,7 @@
               八、
             </div>
             <div class="desc">
-              如果您发现本公司服务人员存在误导行为及其他损害您合法权益的行为，请注意保留书面证据或其他证据，可向本公司投诉 （电话∶ <span class="orange">4008015880</span>）。
+              如果您发现本公司服务人员存在误导行为及其他损害您合法权益的行为，请注意保留书面证据或其他证据，可向本公司投诉（电话∶<span class="orange">4008015880</span>）。
             </div>
           </div>
           <div class="paragraph company bold">
