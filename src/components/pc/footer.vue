@@ -150,7 +150,23 @@
       </div>
     </div>
     <div class="bottom">
-      <span>@易康吉保险经纪有限责任公司</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="//beian.miit.gov.cn" target="_blank">辽ICP备17004821号-1</a></span>
+      <span>@易康吉保险经纪有限责任公司</span>
+      <!-- <span>
+        <a
+          href="//beian.miit.gov.cn"
+          target="_blank"
+        >辽ICP备17004821号-1</a>
+      </span> -->
+      <div class="icp">
+        <a
+          target="_blank"
+          href="//beian.miit.gov.cn"
+          style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+        >
+          <img src="@/assets/imgs/pc/components/icp.png" style="float"/>
+          <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">辽公网安备 21010602000669号</p>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -282,6 +298,13 @@ export default {
     font-size 16rem
     line-height 24rem
     text-align center
+    .icp
+      margin-left 30rem
+      display inline-block 
+      vertical-align middle 
+      padding 20px 0
+      img
+        float left
     a
       color  #C5C7CA
       &:hover
@@ -380,5 +403,9 @@ export default {
       line-height 48px
       transform scale(0.916)
       text-align center
+      .blank
+        display none
+      .icp
+        margin-left 0
 
 </style>
