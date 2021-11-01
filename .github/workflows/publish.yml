@@ -20,6 +20,9 @@ jobs:
       - name: 安装依赖
         run: npm install
 
+      - name: 打包Dll
+        run: npm run build:dll
+
       - name: 打包
         run: npm run build
 
