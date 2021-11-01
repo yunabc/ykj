@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import vLoading from '@/components/mobile/Loading';
+import vLoading from '@/components/mobile/loading';
 import { mapState } from 'vuex';
 import fixedInput from '@/mixins/fixedInput';
 export default {

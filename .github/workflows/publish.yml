@@ -18,7 +18,7 @@ jobs:
           node-version: 14.0.0
 
       - name: 安装依赖
-        run: npm install
+        run: yarn
 
       - name: 打包Dll
         run: npm run build:dll
