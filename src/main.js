@@ -22,6 +22,7 @@ Vue.use(directives);
 Vue.use(animate);
 
 addFastclick();
+
 Vue.use(require('vue-wechat-title'));
 
 const instanceVue = new Vue({
